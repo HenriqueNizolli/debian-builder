@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update
 RUN apt upgrade -y --no-install-recommends
-RUN apt install -y --no-install-recommends curl unzip zip git libatomic1 ca-certificates golang
+RUN apt install -y --no-install-recommends curl unzip zip git libatomic1 ca-certificates golang fakeroot dpkg-dev
 RUN apt clean
 RUN rm -rf /var/lib/apt/lists/*
 

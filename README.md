@@ -21,7 +21,7 @@ This Debian-based Docker image provides a complete development and build environ
 
 This image is designed for building:
 - **Frontend:** Vue.js 3 applications
-- **Backend:** Spring Boot 5.x services
+- **Backend:** Spring Boot 3.x services
 - **Full-stack:** Combined frontend and backend builds in CI/CD pipelines
 
 ## Quick Start
