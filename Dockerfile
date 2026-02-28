@@ -2,11 +2,10 @@ FROM debian:trixie-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt update
-RUN apt upgrade -y --no-install-recommends
-RUN apt install -y --no-install-recommends curl unzip zip git libatomic1 ca-certificates golang fakeroot dpkg-dev
-RUN apt clean
-RUN rm -rf /var/lib/apt/lists/*
+RUN apt-get update
+RUN apt-get upgrade -y --no-install-recommends
+RUN apt-get install -y --no-install-recommends curl unzip zip git libatomic1 ca-certificates golang fakeroot dpkg-dev
+RUN apt-get clean
 
 RUN go install github.com/asdf-vm/asdf/cmd/asdf@v0.18.0
 
@@ -30,6 +29,11 @@ RUN asdf set --home gradle latest:9
 RUN rm -rf $ASDF_DATA_DIR/downloads/*
 RUN rm -rf $ASDF_DATA_DIR/tmp/*
 RUN rm -rf /root/.cache/*
+RUN rm -rf /root/go/pkg/*
+RUN rm -rf /tmp/*
+RUN rm -rf /var/tmp/*
+RUN rm -rf /var/cache/apt/*
+RUN rm -rf /var/lib/apt/lists/*
 
 ENV PATH="/root/.asdf/shims:$PATH"
 
