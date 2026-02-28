@@ -19,8 +19,8 @@ RUN asdf install nodejs latest
 RUN asdf set --home nodejs latest
 
 RUN asdf plugin add java
-RUN asdf install java latest:openjdk
-RUN asdf set --home java latest:openjdk
+RUN asdf install java latest:openjdk-25
+RUN asdf set --home java latest:openjdk-25
 
 RUN asdf plugin add gradle
 RUN asdf install gradle latest:9
