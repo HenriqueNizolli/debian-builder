@@ -12,10 +12,6 @@ This Debian-based Docker image provides a complete development and build environ
   - Node.js - JavaScript runtime for Vue.js 3 development
   - OpenJDK - Open-source Java runtime for Spring Boot applications
   - Gradle - Build automation tool for Java projects
-- **Auto-Updates:** 
-  - Image is automatically rebuilt every 15 days
-  - Always includes the latest versions of Node.js, OpenJDK, and Gradle
-  - Ensures up-to-date security patches and features
 
 ## Use Cases
 
